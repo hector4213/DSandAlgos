@@ -1,0 +1,11 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Algos and Patterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hector Clara",
+  "license": "ISC"
+}
