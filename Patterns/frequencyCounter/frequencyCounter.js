@@ -2,8 +2,8 @@
 // This can often avoid the need for nested loops or O(n^2)operations with arrays/strings
 
 /*
-Write a function called same, which accepts two arrays. The function should return true if every value in the array has it's corresponding value squared in the second array. 
-The frequency of values must be the same.
+Write a function called same, which accepts two arrays. The function should return true if every value in the array has it's 
+corresponding value squared in the second array. The frequency of values must be the same.
 */
 
 // The naive approach O(n^2)(Quadratic Time) solution
@@ -42,7 +42,7 @@ const sameRefactored = (arr1, arr2) => {
 	)
 
 	for (let key in counterMap1) {
-		if (!(key ** 2 in counterMap2)) {
+		if (!counterMap2[key ** 2]) {
 			return false
 		}
 		if (counterMap2[key ** 2] !== counterMap1[key]) {
