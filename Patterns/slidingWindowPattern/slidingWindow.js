@@ -28,7 +28,25 @@ const maxSubarraySum = (arr, num) => {
 	return max
 }
 
-// Tests
+// The refactored solution with a Time Complexity of O(n)(Linear Time)
+
+const maxSubarraySum2 = (arr, num) => {
+	let maxSum = 0
+	let tempSum = 0
+	// 2
+	if (arr.length < num) return null
+	for (let i = 0; i < num; i++) {
+		maxSum += arr[i]
+	}
+	tempSum = maxSum
+	for (let i = num; i < arr.length; i++) {
+		tempSum = tempSum - arr[i - num] + arr[i]
+		maxSum = Math.max(maxSum, tempSum)
+	}
+	return maxSum
+}
+
+// Tests for Naive Approach
 
 console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2) === 10 ? 'PASS' : 'FAIL')
 
@@ -41,3 +59,17 @@ console.log(maxSubarraySum([4, 2, 1, 6, 2], 4) === 13 ? 'PASS' : 'FAIL')
 console.log(maxSubarraySum([4, 2, 1, 6], 1) === 6 ? 'PASS' : 'FAIL')
 
 console.log(maxSubarraySum([], 5) === null ? 'PASS' : 'FAIL')
+
+// Tests for O(n) approach
+
+console.log(maxSubarraySum2([1, 2, 5, 2, 8, 1, 5], 2) === 10 ? 'PASS' : 'FAIL')
+
+console.log(maxSubarraySum2([1, 2, 5, 2, 8, 1, 5], 4) === 17 ? 'PASS' : 'FAIL')
+
+console.log(maxSubarraySum2([4, 2, 1, 6], 1) === 6 ? 'PASS' : 'FAIL')
+
+console.log(maxSubarraySum2([4, 2, 1, 6, 2], 4) === 13 ? 'PASS' : 'FAIL')
+
+console.log(maxSubarraySum2([4, 2, 1, 6], 1) === 6 ? 'PASS' : 'FAIL')
+
+console.log(maxSubarraySum2([], 5) === null ? 'PASS' : 'FAIL')
