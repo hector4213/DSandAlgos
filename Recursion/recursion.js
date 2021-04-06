@@ -21,5 +21,9 @@ const sumRange = (num) => {
 	return num + sumRange(num - 1)
 }
 
-console.log(sumRange(3))
-console.log(countDown(10))
+//EZPZ Example #3
+
+const factorial = (num) => {
+	if (num <= 1) return 1
+	return num * factorial(num - 1)
+}
