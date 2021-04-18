@@ -7,7 +7,7 @@
  * if not found return - 1
  */
 
-// This will search the ENTIRE array
+// This will search the ENTIRE array, pretty much what indexOf does (its a loop too)
 
 const linSearch = (arr, val) => {
 	for (let i = 0; i < arr.length; i++) {
