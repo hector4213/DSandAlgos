@@ -1,5 +1,5 @@
 /**
- * Write a function called power which accepts a base and an exponent. The function should return the power of the base to the eponent. This function should mimic
+ * Write a function called power which accepts a base and an exponent. The function should return the power of the base to the exponent. This function should mimic
  * the functionality of Math.pow()
  */
 
@@ -7,7 +7,7 @@ const power = (base, exponent) => {
 	if (exponent <= 0) return 1
 	return base * power(base, exponent - 1)
 }
-
+console.log('++++POWER TESTS+++++')
 console.log(power(2, 4) === 16 ? 'PASS' : 'FAIL')
 console.log(power(2, 0) === 1 ? 'PASS' : 'FAIL')
 console.log(power(2, 2) === 4 ? 'PASS' : 'FAIL')
@@ -18,9 +18,15 @@ console.log(power(2, 2) === 4 ? 'PASS' : 'FAIL')
  *
  */
 
-const factorial = (num) => {}
-
+const factorial = (num) => {
+	if (num === 1) {
+		return 1
+	}
+	return num * factorial(num - 1)
+}
+console.log('++++FACTORIAL TESTS+++++')
 console.log(factorial(1) === 1 ? 'PASS' : 'FAIL')
 console.log(factorial(2) === 2 ? 'PASS' : 'FAIL')
 console.log(factorial(4) === 24 ? 'PASS' : 'FAIL')
 console.log(factorial(7) === 5040 ? 'PASS' : 'FAIL')
+console.log('++++++++++++++++++++++++')
