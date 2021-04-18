@@ -7,7 +7,9 @@
  * if not found return - 1
  */
 
-// This will search the ENTIRE array, pretty much what indexOf does (its a loop too)
+//  This will search the ENTIRE array, pretty much what indexOf does (its a loop too)
+//  Has a time complexity O(n), as the size of the array grows the time grows.
+//  Linear search is the best we can do in an unsorted array.
 
 const linSearch = (arr, val) => {
 	for (let i = 0; i < arr.length; i++) {
